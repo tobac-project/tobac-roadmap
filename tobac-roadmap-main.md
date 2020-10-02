@@ -21,11 +21,9 @@ Using `tobac` in the following research applications might be beneficial:
 * Tracking of cloud and precipitation cells for monitoring or nowcasting purposes
 
 
-## Defnition of Interfaces
-Define what should be within an individual package, vs what should be external packages
 
 
-### Themes
+## Structure of `tobac`: Themes
 Tobac themes: end-to-end processes to rapidly include new methods within tobac. E.g. tobac v1.
 
 Themes could become submodules.
@@ -42,7 +40,11 @@ Note that we need to highlight that themes should not be completely separate fro
 
 * Will Jones’ optical flow detection and tracking (tobac-flow, may be an external package)
 
-### Data formats
+## Defnition of Data Interfaces
+
+Define what should be within an individual package, vs what should be external packages
+
+### Formats
 
 * Need to build tobac around common interfaces with common data formats, so that different methods can be used together
 
