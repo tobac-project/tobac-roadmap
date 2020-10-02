@@ -1,9 +1,11 @@
 # Tobac Roadmap
 
 ## Overaching goal
-`tobac` is a scientific python package. It aims the help researchers in the identifications and tracking of clouds and precipitation areas. In contrast to existing nowcasting schemes which are highly adjusted to certain data types, `tobac` has the objectives to be a
+`tobac` is a scientific python package. It aims to help researchers in the identifications and tracking of clouds and precipitation areas. In contrast to existing nowcasting schemes which appear to very sophistcated and highly adjusted to certain data types, `tobac` implement a simpler, but more general approach.
 
-* Open-Source Python package for everybody
+`tobac` has the objectives to be an
+
+* Open-Source python package for everybody without cumbersome licence restriction and commercial interests
 * Easy-to-Use modular package system
 * Flexible framework for exploratory data analysis in cloud and precipitation research
 * Robust interface to existing modern Python tools (like `xarray`, `scipy`, `scikit-image`, `trackpy`)
@@ -12,11 +14,11 @@
 Using `tobac` in the following research applications might be beneficial:  
 
 * Lagrangian analysis in a moving frame: Applicable to observations and simulations
-  * Process-based assessment of cloud and precipitation formation in NWP models
+  * Process-based assessment of cloud and precipitation formation in NWP (Numerical Weather Prediction) models
   * Object-based model evaluation – Distributions of cloud sizes and lifetimes
 * Spatial and structural analysis of cloud and precipitation fields 
   * Climate impact of convective organization
-* Tracking of cloud and precipitation cells for Nowcasting Purposes
+* Tracking of cloud and precipitation cells for monitoring or nowcasting purposes
 
 
 ## Defnition of Interfaces
