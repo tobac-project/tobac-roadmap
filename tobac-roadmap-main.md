@@ -1,6 +1,6 @@
 # Tobac Roadmap
 
-## Overaching goal
+## Overarching goal
 `tobac` is a scientific python package. It aims to help researchers in the identifications and tracking of clouds and precipitation areas. In contrast to existing nowcasting schemes which appear to very sophistcated and highly adjusted to certain data types, `tobac` implement a simpler, but more general approach.
 
 `tobac` has the objectives to be an
@@ -40,7 +40,7 @@ Note that we need to highlight that themes should not be completely separate fro
 
 * Will Jones’ optical flow detection and tracking (tobac-flow, may be an external package)
 
-## Defnition of Data Interfaces
+## Definition of Data Interfaces
 
 Define what should be within an individual package, vs what should be external packages
 
