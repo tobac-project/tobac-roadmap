@@ -10,6 +10,7 @@
 * Flexible framework for exploratory data analysis in cloud and precipitation research
 * Robust interface to existing modern Python tools (like `xarray`, `scipy`, `scikit-image`, `trackpy`)
 
+
 ## Research Applications
 Using `tobac` in the following research applications might be beneficial:  
 
@@ -19,8 +20,6 @@ Using `tobac` in the following research applications might be beneficial:
 * Spatial and structural analysis of cloud and precipitation fields 
   * Climate impact of convective organization
 * Tracking of cloud and precipitation cells for monitoring or nowcasting purposes
-
-
 
 
 ## Structure of `tobac`: Themes
@@ -40,17 +39,24 @@ Note that we need to highlight that themes should not be completely separate fro
 
 * Will Jones’ optical flow detection and tracking (tobac-flow, may be an external package)
 
+
 ## Definition of Data Interfaces
 
-Define what should be within an individual package, vs what should be external packages
+It is planned to build and extend `tobac` using a fully modular structure. Handling different modules (parts of the `tobac` workflow) in an exchangeble manner is only possible if data interfaces are well defined. `tobac` needs to be built common interfaces with common data formats, so that different methods can be used together.
 
-### Formats
+### General Format Aspects
 
-* Need to build tobac around common interfaces with common data formats, so that different methods can be used together
+* data should be loaded and handled using xarray datasets/dataarrays
 
-* Data should be loaded and handled using xarray datasets/dataarrays
+* netcdf should be the main output format, especially as future inclusion of zarr/memmap in netcdf standard should substantial improve performance
 
-* Netcdf likely to be main save format, especially as future inclusion of zarr/memmap in netcdf standard should substantial improve performance
+* all modules within `tobac` require a minimal set of input data
+
+### Gridded Input Data
+
+The `tobac` workflow starts with a set of gridded data that might be input from various sources. The input fields should be either loaded by `xarray` functionality or should be converted into `xarray.Dataset` after input.
+
+### Object and Trajectory Data
 
 * Eric Bruning’s new hierarchical data format to be used to handle merging and splitting of tracked objects -- this would be a major advantage for tobac. Need to work out how to best use cf-tree metadata
 
