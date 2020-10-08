@@ -44,7 +44,7 @@ Note that we need to highlight that themes should not be completely separate fro
 
 It is planned to build and extend `tobac` using a fully modular structure. Handling different modules (parts of the `tobac` workflow) in an exchangeble manner is only possible if data interfaces are well defined. `tobac` needs to be built common interfaces with common data formats, so that different methods can be used together.
 
-### General Format Aspects
+### General Aspects
 
 * data should be loaded and handled using xarray datasets/dataarrays
 
@@ -56,11 +56,29 @@ It is planned to build and extend `tobac` using a fully modular structure. Handl
 
 The `tobac` workflow starts with a set of gridded data that might be input from various sources. The input fields should be either loaded by `xarray` functionality or should be converted into `xarray.Dataset` after input.
 
+**for feature detection**
+An `xarray.DataArray` should be supplied to the feature detection modules. This `DataArray` should hold information on time and geo-spatial reference.
+
+Currently, the user is responsible to combine multi-variate fields (e.g. from several satellite channels) into one resulting field for which thresholding and feature detection is done. 
+
+*Caveat*: Feature detection schemes of `tobac_v1` use `iris.Cube`s in their internal data handling. Conversion to from `xarray.DaraArray`s to  `iris.Cube`s is done internally, but fails if input data specifications do not fit with the `iris` requirements. This is too strick and these contrains need to be relaxed.
+
+ 
 ### Object and Trajectory Data
 
-* Eric Bruning’s new hierarchical data format to be used to handle merging and splitting of tracked objects -- this would be a major advantage for tobac. Need to work out how to best use cf-tree metadata
+**detected and tracked features**
+Feature detections and tracking output data in a tabular form. These data should be stored in `xarray.Dataset`s. A consecutive numbering of features might be sufficient for a unique identification of each feature. Information on timing, location, magnitude, and association to tracks can be used for grouping of features and dedicated analysis.
+
+*Split-and-Merge Morphology*: A new hierarchical data format, which captures non-linear relationships between sets of daughter and mother cells, needs to be tested for handling merging and splitting of tracked objects. A cf-compliant data structre would be a major advantage for tobac. It remains open how to best use cf-tree metadata  (Eric Bruning)
+
+*Association with Networks*: In general, features might be interpreted as nodes of a network and tracks are a certain and unique realization of connections between nodes at different times. Interconnections between nodes (in time and space), the edges in the network, can build a rather complex web. A data format might be needed to store informations on these interconnection (e.g. the overlap between cells).
 
 ## Future Contributions
+
+### Priorities
+* a flexible input interface that allows to start feature detection and the rest of the `tobac` workflow with a minimum of requirements on the input data
+
+
 
 ### What feature requests should be within the scope of tobac?
 
