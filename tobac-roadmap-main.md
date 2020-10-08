@@ -56,7 +56,7 @@ It is planned to build and extend `tobac` using a fully modular structure. Handl
 
 The `tobac` workflow starts with a set of gridded data that might be input from various sources. The input fields should be either loaded by `xarray` functionality or should be converted into `xarray.Dataset` after input.
 
-**for feature detection**
+**for feature detection**   
 An `xarray.DataArray` should be supplied to the feature detection modules. This `DataArray` should hold information on time and geo-spatial reference.
 
 Currently, the user is responsible to combine multi-variate fields (e.g. from several satellite channels) into one resulting field for which thresholding and feature detection is done. 
@@ -66,7 +66,7 @@ Currently, the user is responsible to combine multi-variate fields (e.g. from se
  
 ### Object and Trajectory Data
 
-**detected and tracked features**
+**detected and tracked features**   
 Feature detections and tracking output data in a tabular form. These data should be stored in `xarray.Dataset`s. A consecutive numbering of features might be sufficient for a unique identification of each feature. Information on timing, location, magnitude, and association to tracks can be used for grouping of features and dedicated analysis.
 
 *Split-and-Merge Morphology*: A new hierarchical data format, which captures non-linear relationships between sets of daughter and mother cells, needs to be tested for handling merging and splitting of tracked objects. A cf-compliant data structre would be a major advantage for tobac. It remains open how to best use cf-tree metadata  (Eric Bruning)
