@@ -104,6 +104,12 @@ Feature detections and tracking output data in a tabular form. These data should
 
 *Association with Networks*: In general, features might be interpreted as nodes of a network and tracks are a certain and unique realization of connections between nodes at different times. Interconnections between nodes (in time and space), the edges in the network, can build a rather complex web. A data format might be needed to store informations on these interconnection (e.g. the overlap between cells).
 
+## Validation and Evaluation
+
+Validation processes are required to ensure the accruacy and reliability of cloud detection and tracking methodologies. Although similar methods are used to validate a variety of different existing methods, as far as we are aware no large scale intercomparison of cloud tracking methods has taken place (is this correct?). Through its common data format, tobac provides an ideal platform for a common validation framework that can be applied to a wide range of cloud tracking methods using different data types.
+
+A common test dataset should be provided for use with the tobac framework. This dataset would include synthetic and/or real data for a variety of measurements from a variety of platforms, including geostationary satellite observation, ground based cloud radar and model output fields. The use of a common test dataset would enable not only the application of 'ground-truth' observations for validating cloud detection (such as lightning measurements), but could also be combined with a hand-tracked catalogue of clouds to evaluate not only the detection methods but also the ability of a method to accurately track individual cloud objects as well as their splits and merges.
+
 ## Future Contributions
 
 ### Priorities
