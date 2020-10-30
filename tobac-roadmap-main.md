@@ -110,16 +110,20 @@ Validation processes are required to ensure the accruacy and reliability of clou
 
 A common test dataset should be provided for use with the tobac framework. This dataset would include synthetic and/or real data for a variety of measurements from a variety of platforms, including geostationary satellite observation, ground based cloud radar and model output fields. The use of a common test dataset would enable not only the application of 'ground-truth' observations for validating cloud detection (such as lightning measurements), but could also be combined with a hand-tracked catalogue of clouds to evaluate not only the detection methods but also the ability of a method to accurately track individual cloud objects as well as their splits and merges.
 
-## Future Contributions
+## Development Goals and Future Vision
+### Short-term Priorities
+* implement the planned data interfaces on a basic level to the existing `tobac` code
+* add planned themes as extensions (TINT, Fabian Senf’s subsegmentation work, Will Jones’ optical flow detection and tracking)
+* replace all `iris.Cube` operations with `xarray` to allow for analysis a very large datasets
+* develop a general concept for hierarchical data handling
 
-### Priorities
-* a flexible input interface that allows to start feature detection and the rest of the `tobac` workflow with a minimum of requirements on the input data
-
-
+### Long-term Priorities
+* thorough implementation of `dask` capabilities
+* implement hierarchical data structure for handling complex relationships between cells (e.g. split & merge problem)
+* conceptualize an object-based (`tobac` classes) approach to handle exchange between different `tobac` elements (parts of themes)
 
 ### What feature requests should be within the scope of tobac?
-
-Caution: need to be selective about what themes are included. Initially limit to specific packages:
+* still under discussion (Caution: need to be selective about what themes are included)
 
 
         
