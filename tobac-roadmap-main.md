@@ -119,12 +119,16 @@ A common test dataset should be provided for use with the tobac framework. This 
 * develop a general concept for hierarchical data handling
 
 ### Long-term Priorities
-* thorough implementation of `dask` capabilities
+* planning and thorough implementation of `dask` capabilities for large dataset and parallel workflows
 * implement hierarchical data structure for handling complex relationships between cells (e.g. split & merge problem)
 * conceptualize an object-based (`tobac` classes) approach to handle exchange between different `tobac` elements (parts of themes)
 
 ### What feature requests should be within the scope of tobac?
-* still under discussion (Caution: need to be selective about what themes are included)
+*still under discussion (Caution: need to be selective about what themes are included)*
+* dedicated feature detection techniques that go beyond threshold-based segmentation
+* additions to the object tracking methodology allowing more flexible associations to tracks
+* methods that combine objects to clusters for tracking on a higher hierarchical level
+
 
 
 ## References
