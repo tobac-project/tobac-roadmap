@@ -24,8 +24,7 @@ Using `tobac` in the following research applications might be beneficial:
 
 ## Structure of `tobac`
 
-**Modular Framework**
-
+**Modular Framework**  
 The modular framework of tobac was designed by Max Heikenfeld as part of the original release of tobac (https://doi.org/10.5194/gmd-12-4551-2019). The elements of tobac are laid out as the following:
 
 * data input and output
@@ -44,8 +43,7 @@ It should be noted that in order to support a diverse range of applications and 
 
 All module components should use only the defined data interfaces listed in the section below for inputs and outputs, in addition to all parameters required by the user to tune the model.
 
-**Themes**
-
+**Themes**  
 Tobac themes are end-to-end processes to rapidly include new methods within tobac in a similar manner to existing tracking methodologies.
 
 Note that we need to highlight that themes should not be completely separate from each other. Eventually themes should be worked into methods with common, defined interfaces, allowing users to “mix and match”. Themes incorporated within tobac should be developed into separate modular workflows over time.
@@ -67,11 +65,11 @@ For example, the data structure of TINT is sufficiently similar to tobac for it 
 
 Methodologies which require extensions to this framework (for example, requiring extra data inputs) should be considered for development as external submodules or pre-processors of tobac.
 
-**Object-Oriented `tobac`**
-
+**Object-Oriented `tobac`**  
 To achieve the overall goal of a fully modular and adaptable `tobac` framework, an object-oriented approach is to be considered. This approach would involve `tobac` being centred around a `tobac` class. This class would contain all of the defined data interfaces, allowing seamless integration of methodologies from multiple `tobac` themes. The advantages of a class-centred approach are multiple: 
 * the ability to handle multiple data interfaces behind the scenes; 
 * the ability to combine multiple detection and tracking methodologies without the user requiring knowledge of the underlying code; and improving the reproducibility of tracking methodologies.
+
 
 ## Definition of Data Interfaces
 
