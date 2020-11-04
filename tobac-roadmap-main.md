@@ -1,7 +1,7 @@
 # Tobac Roadmap
 
-## Overarching goal
-`tobac` is a scientific python package for the detection, tracking and analsysis of clouds and their associated properties. In contrast to existing nowcasting and cloud tracking schemes which are commonly designed to be used with specific data types and applications, `tobac` aims to be a simpler, modular, and more general toolset for cloud tracking.
+## Overarching Goal
+`tobac` is a scientific python package for the detection, tracking and analysis of clouds and their associated properties. In contrast to existing nowcasting and cloud tracking schemes which are commonly designed to be used with specific data types and applications, `tobac` aims to be a simpler, modular, and more general toolset for cloud tracking.
 
 `tobac` has the objectives to be an
 
@@ -24,7 +24,7 @@ Using `tobac` in the following research applications might be beneficial:
 
 ## Structure of `tobac`
 
-**Modular framework**
+**Modular Framework**
 
 The modular framework of tobac was designed by Max Heikenfeld as part of the original release of tobac (https://doi.org/10.5194/gmd-12-4551-2019). The elements of tobac are laid out as the following:
 
@@ -50,26 +50,28 @@ Tobac themes are end-to-end processes to rapidly include new methods within toba
 
 Note that we need to highlight that themes should not be completely separate from each other. Eventually themes should be worked into methods with common, defined interfaces, allowing users to “mix and match”. Themes incorporated within tobac should be developed into separate modular workflows over time.
 
-**currently existing themes**
+**Currently Existing Themes**
 * Tobac_v1
 
-**planned extensions**
+**Planned Extensions**
 * Fabian Senf’s subsegmentation work
 
 * TINT (https://github.com/openradar/TINT)
 
 * Will Jones’ optical flow detection and tracking (tobac-flow, may be an external package)
 
-**considerations for themes within the scope of tobac**
+**Considerations for Themes within the Scope of `tobac`**  
 When incoroporating themes within tobac, it should be considered both whether the theme can be separated into an underlying modular workflow, and whether the data requirement of the workflow fit within the data interfaces defined for tobac.
 
 For example, the data structure of TINT is sufficiently similar to tobac for it to be incorporated as an alternate theme, with the ultimate goal of becoming alternative modular components of tobac.
 
-Methodologies which require extensions to this framework (for example, requiring extra data inputs) should be considered for development as external submodules of tobac
+Methodologies which require extensions to this framework (for example, requiring extra data inputs) should be considered for development as external submodules or pre-processors of tobac.
 
-**Object-oriented tobac**
+**Object-Oriented `tobac`**
 
-To achieve the overall goal of a fully modular and adaptable tobac framework, and object-oriented approach is to be considered. This approach would involve tobac being centred around a 'tobac' class. This class would contain all of the defined data interfaces, allowing seamless integration of methodologies from multiple tobac themes. The advantages of a class-centred approach are multiple: the ability to handle multiple data interfaces behind the scenes; the ability to combine multiple detection and tracking methodologies without the user requiring knowledge of the underlying code; and improving the reproducibility of tracking methodologies.
+To achieve the overall goal of a fully modular and adaptable `tobac` framework, an object-oriented approach is to be considered. This approach would involve `tobac` being centred around a `tobac` class. This class would contain all of the defined data interfaces, allowing seamless integration of methodologies from multiple `tobac` themes. The advantages of a class-centred approach are multiple: 
+* the ability to handle multiple data interfaces behind the scenes; 
+* the ability to combine multiple detection and tracking methodologies without the user requiring knowledge of the underlying code; and improving the reproducibility of tracking methodologies.
 
 ## Definition of Data Interfaces
 
