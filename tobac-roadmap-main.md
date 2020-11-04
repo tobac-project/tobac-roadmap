@@ -25,7 +25,7 @@ Using `tobac` in the following research applications might be beneficial:
 ## Structure of `tobac`
 
 **Modular Framework**  
-The modular framework of tobac was designed by Max Heikenfeld as part of the original release of tobac (https://doi.org/10.5194/gmd-12-4551-2019). The elements of tobac are laid out as the following:
+The modular framework of tobac was designed by Max Heikenfeld as part of the original release of tobac (Heikenfeld et al., 2019; https://doi.org/10.5194/gmd-12-4551-2019). The elements of tobac are laid out as the following:
 
 * data input and output
 
@@ -52,7 +52,7 @@ Note that we need to highlight that themes should not be completely separate fro
 * Tobac_v1
 
 **Planned Extensions**
-* Fabian Senf’s subsegmentation work
+* Fabian Senf’s subsegmentation work (Senf et al., 2018)
 
 * TINT (https://github.com/openradar/TINT)
 
@@ -87,18 +87,18 @@ It is planned to build and extend `tobac` using a fully modular structure. Handl
 
 The `tobac` workflow starts with a set of gridded data that might be input from various sources. The input fields should be either loaded by `xarray` functionality or should be converted into `xarray.Dataset` after input.
 
-**for feature detection**   
+**For Feature Detection**   
 An `xarray.DataArray` should be supplied to the feature detection modules. This `DataArray` should hold information on time and geo-spatial reference.
 
 Currently, the user is responsible to combine multi-variate fields (e.g. from several satellite channels) into one resulting field for which thresholding and feature detection is done. 
 
-*Caveat*: Feature detection schemes of `tobac_v1` use `iris.Cube`s in their internal data handling. Conversion to from `xarray.DaraArray`s to  `iris.Cube`s is done internally, but fails if input data specifications do not fit with the `iris` requirements. This is too strick and these contrains need to be relaxed.
+*Caveat*: Feature detection schemes of `tobac_v1` use `iris.Cube`s in their internal data handling. Conversion to from `xarray.DaraArray`s to  `iris.Cube`s is done internally, but fails if input data specifications do not fit with the `iris` requirements. This is too strict and these contrains need to be relaxed.
 
  
 ### Object and Trajectory Data
 
-**detected and tracked features**   
-Feature detections and tracking output data in a tabular form. These data should be stored in `xarray.Dataset`s. A consecutive numbering of features might be sufficient for a unique identification of each feature. Information on timing, location, magnitude, and association to tracks can be used for grouping of features and dedicated analysis.
+**Detected and Tracked Features**   
+Feature detections and tracking output data in a tabular form. These data should be stored in `xarray.Dataset`. A consecutive numbering of features might be sufficient for a unique identification of each feature. Information on timing, location, magnitude, and association to tracks can be used for grouping of features and dedicated analysis.
 
 *Split-and-Merge Morphology*: A new hierarchical data format, which captures non-linear relationships between sets of daughter and mother cells, needs to be tested for handling merging and splitting of tracked objects. A cf-compliant data structre would be a major advantage for tobac. It remains open how to best use cf-tree metadata  (Eric Bruning)
 
@@ -106,9 +106,10 @@ Feature detections and tracking output data in a tabular form. These data should
 
 ## Validation and Evaluation
 
-Validation processes are required to ensure the accruacy and reliability of cloud detection and tracking methodologies. Although similar methods are used to validate a variety of different existing methods, as far as we are aware no large scale intercomparison of cloud tracking methods has taken place (is this correct?). Through its common data format, tobac provides an ideal platform for a common validation framework that can be applied to a wide range of cloud tracking methods using different data types.
+Validation processes are required to ensure the accruacy and reliability of cloud detection and tracking methodologies. Although similar methods are used to validate a variety of different existing methods, as far as we are aware no large scale intercomparison of cloud tracking methods has taken place (see Lakshmanan and Smith, 2010, for interesting evaluation concepts). Through its common data format, tobac provides an ideal platform for a common validation framework that can be applied to a wide range of cloud tracking methods using different data types.
 
 A common test dataset should be provided for use with the tobac framework. This dataset would include synthetic and/or real data for a variety of measurements from a variety of platforms, including geostationary satellite observation, ground based cloud radar and model output fields. The use of a common test dataset would enable not only the application of 'ground-truth' observations for validating cloud detection (such as lightning measurements), but could also be combined with a hand-tracked catalogue of clouds to evaluate not only the detection methods but also the ability of a method to accurately track individual cloud objects as well as their splits and merges.
+
 
 ## Development Goals and Future Vision
 ### Short-term Priorities
@@ -126,7 +127,13 @@ A common test dataset should be provided for use with the tobac framework. This 
 * still under discussion (Caution: need to be selective about what themes are included)
 
 
-        
+## References
+
+Heikenfeld, M., P. J. Marinescu, M. Christensen, D. Watson-Parris, F. Senf, S. C. van den Heever, and P. Stier, 2019: tobac 1.2: towards a flexible framework for tracking and analysis of clouds in diverse datasets. Geosci. Model Dev., 12, 4551–4570, doi:10.5194/gmd-12-4551-2019.
+
+Lakshmanan, V., and T. Smith, 2010: An Objective Method of Evaluating and Devising Storm-Tracking Algorithms. Wea. Forecasting, 25, 701–709, doi:10.1175/2009WAF2222330.1. 
+
+Senf, F., D. Klocke, and M. Brueck, 2018: Size-Resolved Evaluation of Simulated Deep Tropical Convection. Mon. Wea. Rev., 146, 2161–2182.
 
    
 
