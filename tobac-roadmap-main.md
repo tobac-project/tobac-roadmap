@@ -114,14 +114,14 @@ A common test dataset should be provided for use with the tobac framework. This 
 ## Development Goals and Future Vision
 ### Short-term Priorities
 * implement the planned data interfaces on a basic level to the existing `tobac` code
-* add planned themes as extensions (TINT, Fabian Senf’s subsegmentation work, Will Jones’ optical flow detection and tracking)
+* add planned themes as extensions (TINT, Fabian Senf’s subsegmentation work)
 * replace all `iris.Cube` operations with `xarray` to allow for analysis a very large datasets
-* develop a general concept for hierarchical data handling
+* develop a general concept for hierarchical data handling (not necessarily implemented at this point)
 
 ### Long-term Priorities
 * planning and thorough implementation of `dask` capabilities for large dataset and parallel workflows
 * implement hierarchical data structure for handling complex relationships between cells (e.g. split & merge problem)
-* conceptualize an object-based (`tobac` classes) approach to handle exchange between different `tobac` elements (parts of themes)
+* conceptualize an object-based (`tobac` classes) approach to handle exchange between different `tobac` elements (parts of themes), allowing extension to new methods (e.g. Will Jones’ optical flow detection and tracking)
 
 ### What feature requests should be within the scope of tobac?
 *still under discussion (Caution: need to be selective about what themes are included)*
