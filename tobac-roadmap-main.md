@@ -10,14 +10,16 @@
 * Maintainable: easy to maintain and add new features
 * Modular: abstracting the key steps of feature tracking
 * Flexible: capable of using a broad range of heterogeneous data sources
-* Multi-purpose: tracking phenomena evident in satellite and  radar observations and within output  from from climate, k-scale and LES models
-* A framework: a standard data model across identification and tracking methodologies
+* Multi-purpose: tracking phenomena evident in satellite and  radar observations and within output from climate, k-scale and LES models
+* A framework: establishing a standard data model across identification and tracking methodologies
 * Extensible: able to add new identification and tracking methodologies without a substantial revision to the core
 
 ## Structure of *tobac*
 ### Modular Framework
 
-The modular framework of *tobac* was designed by Max Heikenfeld as part of the original release  (Heikenfeld et al., 2019; https://doi.org/10.5194/gmd-12-4551-2019). The elements of tobac are laid out as the following:
+The modular framework of *tobac* was designed by Max Heikenfeld as part of the original release  (Heikenfeld et al., 2019; https://doi.org/10.5194/gmd-12-4551-2019). Essential extensions of *tobac* are documented in Sokolowsky, Freeman et al. (2023;  https://doi.org/10.5194/egusphere-2023-1722).  
+
+The elements of tobac are laid out as the following:
 * Data input and output
 * Data filtering 
 * Feature detection
@@ -67,9 +69,7 @@ The modular components of tobac are not restricted to the elements listed above.
 
 Heikenfeld, M., P. J. Marinescu, M. Christensen, D. Watson-Parris, F. Senf, S. C. van den Heever, and P. Stier, 2019: tobac 1.2: towards a flexible framework for tracking and analysis of clouds in diverse datasets. Geosci. Model Dev., 12, 4551–4570, doi:10.5194/gmd-12-4551-2019.
 
-Lakshmanan, V., and T. Smith, 2010: An Objective Method of Evaluating and Devising Storm-Tracking Algorithms. Wea. Forecasting, 25, 701–709, doi:10.1175/2009WAF2222330.1. 
-
-Senf, F., D. Klocke, and M. Brueck, 2018: Size-Resolved Evaluation of Simulated Deep Tropical Convection. Mon. Wea. Rev., 146, 2161–2182.
+Sokolowsky, G. A., Freeman, S. W., Jones, W., Kukulies, J., Senf, F., Marinescu, P. J., Heikenfeld, M., Brunner, K., Bruning, E., Collis, S., Jackson, R., Leung, G., Pfeifer, N., Raut, B., Saleeby, S., Stier, P., & van den Heever, S. C. (2023). tobac v1.5: Introducing Fast 3D Tracking, Splits and Mergers, and Other Enhancements for Identifying and Analysing Meteorological Phenomena, EGUsphere [preprint], https://doi.org/10.5194/egusphere-2023-1722
 
    
 
